@@ -27,9 +27,11 @@ function App() {
       setLoading(true);
       setError(null);
 
-     const response = await axios.get(
-  `https://corsproxy.io/?https://api.artic.edu/api/v1/artworks?page=${page}`
+const response = await axios.get(
+  `https://api.allorigins.win/raw?url=https://api.artic.edu/api/v1/artworks?page=${page}`
 );
+
+
 
       setArtworks(response.data.data);
       setTotalRecords(response.data.pagination.total);
